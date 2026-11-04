@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Noor | Web Developer & Entrepreneur</title>
+    <meta name="description" content="Ali Noor — Web Developer, Entrepreneur, and Owner of Pixel Tap Creative Studio. Building digital experiences that make an impact.">
+    <meta name="keywords" content="Ali Noor, Web Developer, Entrepreneur, Pixel Tap, NOAH, Portfolio">
+    <meta name="author" content="Ali Noor">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ali Noor | Web Developer & Entrepreneur">
+    <meta property="og:description" content="Building digital experiences that make an impact.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- PDF.js for certificate rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div id="preloader">
+        <div class="loader">
+            <span class="loader-text">AN</span>
+            <div class="loader-ring"></div>
+        </div>
+    </div>
+
+    <!-- ============ CURSOR (desktop only) ============ -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Ali Noor home">
+                <span class="logo-mark" aria-hidden="true">AN</span>
+                <span class="logo-word">Ali Noor</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#social-proof" class="nav-link">Follow Along</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="resume-menu">
+                <button class="nav-cta" id="resumeMenuButton" aria-expanded="false" aria-haspopup="true">
+                    <i class="fas fa-download"></i> Resume
+                </button>
+                <div class="resume-options" id="resumeOptions" role="menu">
+                    <button type="button" data-resume-style="ats">ATS Professional</button>
+                    <button type="button" data-resume-style="technical">Technical</button>
+                    <button type="button" data-resume-style="creative">Creative</button>
+                    <button type="button" data-resume-style="founder">Founder</button>
+                    <button type="button" data-resume-style="editorial">Editorial</button>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="hero">
+        <div class="hero-bg-animation">
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting animate-up">Hello, I'm</p>
+                <h1 class="hero-name animate-up delay-1">Ali Noor</h1>
+                <div class="hero-title-wrapper animate-up delay-2">
+                    <span class="hero-title-static">I'm a </span>
+                    <span class="hero-title-dynamic" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description animate-up delay-3">
+                    Entrepreneur & Web Developer crafting digital experiences through 
+                    <span class="highlight">Pixel Tap</span> Creative Studio. Turning ideas into reality, one pixel at a time.
+                </p>
+                <div class="hero-buttons animate-up delay-4">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Let's Talk</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="hero-socials animate-up delay-5">
+                    <a href="https://github.com/mrkhrus" target="_blank" rel="noopener" aria-label="Open GitHub profile"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ali-noor-705845166/" target="_blank" rel="noopener" aria-label="Open LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mr_khrus" target="_blank" rel="noopener" aria-label="Open Instagram profile"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/mrkhrus" target="_blank" rel="noopener" aria-label="Open Facebook profile"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20found%20your%20website." target="_blank" rel="noopener" aria-label="Open WhatsApp chat"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="hero-image animate-up delay-2">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <img src="images/profile.jpg" alt="Ali Noor — Web Developer & Entrepreneur" loading="eager">
+                    <div class="hero-image-border"></div>
+                </div>
+                <div class="hero-float-badge badge-1">
+                    <i class="fas fa-code"></i>
+                    <span>Developer</span>
+                </div>
+                <div class="hero-float-badge badge-2">
+                    <i class="fas fa-rocket"></i>
+                    <span>Entrepreneur</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="home-about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">The person behind the <span class="gradient-text">pixels</span></h2>
+                <p class="section-subtitle">Computer Science student, founder, and hands-on problem solver.</p>
+            </div>
+            <div class="home-about-grid">
+                <div class="home-about-copy">
+                    <p>Computer Science student with experience in smart metering operations, project supervision, digital marketing, social media management, and technical problem-solving.</p>
+                    <p>As the founder of <strong>Pixel Tap</strong> Creative Studio, I turn ambitious ideas into useful digital experiences through web development, design, and strategy.</p>
+                    <div class="home-education">
+                        <h3><span>🎓</span> Education</h3>
+                        <article><span>2022 — PRESENT</span><strong>BS Computer Science — 7th Semester</strong><small>GPA: 3.11</small></article>
+                        <article><span>2020 — 2022</span><strong>FSc — KIPS College</strong><small>Intermediate Education</small></article>
+                        <article><span>2017 — 2020</span><strong>Matric — WAPDA Cadet College Tarbela</strong><small>Matriculation</small></article>
+                    </div>
+                </div>
+                <div class="home-code-window" aria-label="Ali Noor profile data">
+                    <div class="home-code-header"><span></span><span></span><span></span><small>about_ali.js</small></div>
+                    <pre><code><b>const</b> ali = {
+  name: <i>"Ali Noor"</i>,
+  role: <i>"CS Student &amp; Entrepreneur"</i>,
+  location: <i>"Multan, Pakistan"</i>,
+  company: <i>"Pixel Tap"</i>,
+  passion: <i>"AI &amp; Software Dev"</i>,
+  available: <em>true</em>
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE SECTION ============ -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+                <p class="section-subtitle">Professional journey and career milestones</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"><i class="fas fa-palette"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Founder & Owner</h3>
+                            <span class="timeline-company">Pixel Tap Creative Studio</span>
+                            <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 – Present</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Founded and manage a creative design studio specializing in web development and branding</li>
+                            <li>Deliver impactful digital marketing strategies and stunning digital experiences</li>
+                            <li>Handle client relations, project management, and creative direction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-up delay-1">
+                    <div class="timeline-dot"><i class="fas fa-bullhorn"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Social Media Manager & Digital Marketing Specialist</h3>
+                            <span class="timeline-company">Poet Shakir Shujabadi</span>
+                            <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2019 – Present</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Managed social media campaigns and branding strategies</li>
+                            <li>Created engaging content and drove audience engagement</li>
+                            <li>Developed and executed digital marketing initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-up delay-2">
+                    <div class="timeline-dot"><i class="fas fa-desktop"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Computer Operator & Field Supervisor</h3>
+                            <span class="timeline-company">Intelligent Metering System (IMS), Lahore</span>
+                            <span class="timeline-date"><i class="fas fa-calendar-alt"></i> IMS Project</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Managed project records, reporting, and operational data</li>
+                            <li>Coordinated field installation teams for smart metering projects</li>
+                            <li>Ensured accurate data management and timely reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-up delay-3">
+                    <div class="timeline-dot"><i class="fas fa-project-diagram"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Project Supervisor — Vehari Smart Meter Installation</h3>
+                            <span class="timeline-company">Intelligent Metering System (IMS), Lahore</span>
+                            <span class="timeline-date"><i class="fas fa-calendar-alt"></i> IMS Project</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Successfully supervised the installation and deployment of 5,600 electricity meters in Vehari</li>
+                            <li>Ensured quality, safety, and reporting accuracy throughout the project</li>
+                            <li>Managed timely project completion and coordinated with field teams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section-close">
+                <span class="section-tag">&lt;/experience&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Web Development -->
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5" style="color: #e34f26;"></i>
+                            <span>HTML5</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt" style="color: #1572b6;"></i>
+                            <span>CSS3</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square" style="color: #f7df1e;"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react" style="color: #61dafb;"></i>
+                            <span>React</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-wordpress" style="color: #21759b;"></i>
+                            <span>WordPress</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Programming -->
+                <div class="skill-category reveal-up delay-1">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python" style="color: #3776ab;"></i>
+                            <span>Python</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-copyright" style="color: #00599C;"></i>
+                            <span>C / C++</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database" style="color: #e48e00;"></i>
+                            <span>SQL</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt" style="color: #f05032;"></i>
+                            <span>Git & GitHub</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marketing & Tools -->
+                <div class="skill-category reveal-up delay-2">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Marketing & Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line" style="color: #00d4ff;"></i>
+                            <span>Digital Marketing</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-word" style="color: #2b579a;"></i>
+                            <span>MS Office</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search" style="color: #4285f4;"></i>
+                            <span>SEO</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Design & Forensics -->
+                <div class="skill-category reveal-up delay-3">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>Design & Forensics</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-figma" style="color: #f24e1e;"></i>
+                            <span>Figma</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush" style="color: #00c4cc;"></i>
+                            <span>Canva</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search-plus" style="color: #4fc3f7;"></i>
+                            <span>Autopsy</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fingerprint" style="color: #ab47bc;"></i>
+                            <span>FTK Imager</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="65"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-close">
+                <span class="section-tag">&lt;/skills&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Things I've built and am building</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Pixel Tap -->
+                <div class="project-card featured reveal-up">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="project-badge">Founder & Owner</div>
+                        <h3 class="project-title">Pixel Tap</h3>
+                        <p class="project-description">
+                            A creative design studio specializing in web development, branding, 
+                            digital marketing, and crafting stunning digital experiences for businesses 
+                            looking to make their mark online.
+                        </p>
+                        <div class="project-tech">
+                            <span>Web Design</span>
+                            <span>Branding</span>
+                            <span>Digital Marketing</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-status live">
+                            <span class="status-dot"></span> Live & Active
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NOAH -->
+                <div class="project-card reveal-up delay-1">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-badge">Final Year Project</div>
+                        <h3 class="project-title">NOAH</h3>
+                        <p class="project-subtitle">Natural Online Assistant Hub</p>
+                        <p class="project-description">
+                            An AI-powered browser extension designed to assist users in navigating Google Chrome 
+                            more efficiently. Focuses on intelligent browsing assistance, accessibility enhancement, 
+                            task automation, and user guidance through AI-driven interactions.
+                        </p>
+                        <div class="project-tech">
+                            <span>AI</span>
+                            <span>Python</span>
+                            <span>Chrome Extension</span>
+                            <span>React</span>
+                            <span>Automation</span>
+                        </div>
+                        <div class="project-status wip">
+                            <span class="status-dot"></span> In Development
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio -->
+                <div class="project-card reveal-up delay-2">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-badge">Personal</div>
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            This very website you're browsing! A modern, responsive portfolio built with 
+                            vanilla HTML, CSS, and JavaScript featuring smooth animations and a dark theme.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mrkhrus" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-close">
+                <span class="section-tag">&lt;/projects&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SOCIAL PROOF SECTION ============ -->
+    <section id="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;social-proof&gt;</span>
+                <h2 class="section-title">Follow <span class="gradient-text">Along</span></h2>
+                <p class="section-subtitle">Find the latest work, ideas, and updates across my profiles.</p>
+            </div>
+            <div class="social-proof-grid">
+                <a class="social-proof-card instagram-card" href="https://www.instagram.com/mr_khrus" target="_blank" rel="noopener">
+                    <span class="social-proof-icon"><i class="fab fa-instagram"></i></span><small>INSTAGRAM</small><h3>@mr_khrus</h3><strong>-- <span>followers</span></strong><p>Visual notes and behind-the-scenes work.</p>
+                </a>
+                <a class="social-proof-card facebook-card" href="https://www.facebook.com/mrkhrus" target="_blank" rel="noopener">
+                    <span class="social-proof-icon"><i class="fab fa-facebook-f"></i></span><small>FACEBOOK</small><h3>mrkhrus</h3><strong>-- <span>followers</span></strong><p>Updates and community conversations.</p>
+                </a>
+                <a class="social-proof-card linkedin-card" href="https://www.linkedin.com/in/ali-noor-705845166/" target="_blank" rel="noopener">
+                    <span class="social-proof-icon"><i class="fab fa-linkedin-in"></i></span><small>LINKEDIN</small><h3>Ali Noor</h3><strong>-- <span>followers</span></strong><p>Professional milestones and learning.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CERTIFICATES SECTION ============ -->
+    <section id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;certificates&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+                <p class="section-subtitle">Certifications and achievements</p>
+            </div>
+            <!-- Certificate Filter Tabs -->
+            <div class="cert-filters">
+                <button class="cert-filter active" data-filter="all">All (17)</button>
+                <button class="cert-filter" data-filter="coursera">Coursera (13)</button>
+                <button class="cert-filter" data-filter="dstp">DSTP (4)</button>
+            </div>
+
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Coursera Certificates -->
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera 0R7U824IY7B5.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Google People Management</h4>
+                        <p>ID: 0R7U824IY7B5</p>
+                        <a href="https://www.coursera.org/verify/0R7U824IY7B5" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera 4VI8T58EXNTA.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: 4VI8T58EXNTA</p>
+                        <a href="https://www.coursera.org/verify/4VI8T58EXNTA" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera DYRGS059XTLM.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: DYRGS059XTLM</p>
+                        <a href="https://www.coursera.org/verify/DYRGS059XTLM" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera HI47A85I6W1J.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: HI47A85I6W1J</p>
+                        <a href="https://www.coursera.org/verify/HI47A85I6W1J" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera JBXPMF5JLV37.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: JBXPMF5JLV37</p>
+                        <a href="https://www.coursera.org/verify/JBXPMF5JLV37" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera KGYG9EDVLSFH.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: KGYG9EDVLSFH</p>
+                        <a href="https://www.coursera.org/verify/KGYG9EDVLSFH" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera L5XNDET7IVZ6.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: L5XNDET7IVZ6</p>
+                        <a href="https://www.coursera.org/verify/L5XNDET7IVZ6" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera OSAA7HVKYMW9.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: OSAA7HVKYMW9</p>
+                        <a href="https://www.coursera.org/verify/OSAA7HVKYMW9" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera PFFOEE5IYGWY.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: PFFOEE5IYGWY</p>
+                        <a href="https://www.coursera.org/verify/PFFOEE5IYGWY" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera TLPZJF1JZ5EX.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: TLPZJF1JZ5EX</p>
+                        <a href="https://www.coursera.org/verify/TLPZJF1JZ5EX" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera WYDDV5ZGY9SU.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Google AI Essentials</h4>
+                        <p>ID: WYDDV5ZGY9SU</p>
+                        <a href="https://www.coursera.org/verify/professional-cert/WYDDV5ZGY9SU" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera YQEWBNMUD3WN.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: YQEWBNMUD3WN</p>
+                        <a href="https://www.coursera.org/verify/YQEWBNMUD3WN" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="coursera">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/Coursera ZQVGC8SL6SL0.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge coursera"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        <h4>Coursera Certificate</h4>
+                        <p>ID: ZQVGC8SL6SL0</p>
+                        <a href="https://www.coursera.org/verify/ZQVGC8SL6SL0" target="_blank" class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+
+                <!-- DSTP Certificates -->
+                <div class="certificate-card reveal-up" data-type="dstp">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/DSTP_Certificate_ 2GFCTHYMK.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge dstp"><i class="fas fa-award"></i> DSTP</span>
+                        <h4>Digital Marketing</h4>
+                        <p>ID: 2GFCTHYMK</p><a href="https://digiskills.pk/verify/" target="_blank" rel="noopener" class="cert-verify dstp-verify" data-certificate-id="2GFCTHYMK"><i class="fas fa-external-link-alt"></i> Verify ID</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="dstp">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/DSTP_Certificate_ 38BRXS6MK.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge dstp"><i class="fas fa-award"></i> DSTP</span>
+                        <h4>Graphic Design & Video Editing</h4>
+                        <p>ID: 38BRXS6MK</p><a href="https://digiskills.pk/verify/" target="_blank" rel="noopener" class="cert-verify dstp-verify" data-certificate-id="38BRXS6MK"><i class="fas fa-external-link-alt"></i> Verify ID</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="dstp">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/DSTP_Certificate_ 77ZC6NXMK.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge dstp"><i class="fas fa-award"></i> DSTP</span>
+                        <h4>WordPress & Freelancing</h4>
+                        <p>ID: 77ZC6NXMK</p><a href="https://digiskills.pk/verify/" target="_blank" rel="noopener" class="cert-verify dstp-verify" data-certificate-id="77ZC6NXMK"><i class="fas fa-external-link-alt"></i> Verify ID</a>
+                    </div>
+                </div>
+                <div class="certificate-card reveal-up" data-type="dstp">
+                    <div class="cert-preview"><canvas class="cert-canvas" data-pdf="certificates/DSTP_Certificate_ JZJXJSKMK.pdf"></canvas></div>
+                    <div class="certificate-info">
+                        <span class="cert-badge dstp"><i class="fas fa-award"></i> DSTP</span>
+                        <h4>Affiliate Marketing</h4>
+                        <p>ID: JZJXJSKMK</p><a href="https://digiskills.pk/verify/" target="_blank" rel="noopener" class="cert-verify dstp-verify" data-certificate-id="JZJXJSKMK"><i class="fas fa-external-link-alt"></i> Verify ID</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate Modal -->
+            <div class="cert-modal" id="certModal">
+                <div class="cert-modal-overlay"></div>
+                <div class="cert-modal-content">
+                    <button class="cert-modal-close" id="certModalClose"><i class="fas fa-times"></i></button>
+                    <canvas id="certModalCanvas"></canvas>
+                    <div class="cert-modal-actions">
+                        <a id="certModalDownload" class="btn btn-primary" download><i class="fas fa-download"></i> Download</a>
+                        <a id="certModalVerify" class="btn btn-outline" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-close">
+                <span class="section-tag">&lt;/certificates&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Let's create something <span class="gradient-text">amazing</span> together</h3>
+                    <p>Whether you need a website, digital marketing strategy, or creative design — 
+                       I'm here to help bring your vision to life.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:contact@alinoordhuddi.me">contact@alinoordhuddi.me</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <h4>Personal Email</h4>
+                                <a href="mailto:7345742@gmail.com">7345742@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+923027700990">+92 302 7700990</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon whatsapp-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20found%20your%20website." target="_blank" rel="noopener">Start a direct chat</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Multan, Pakistan</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <h4>Studio</h4>
+                                <span>Pixel Tap Creative Studio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://github.com/mrkhrus" target="_blank" rel="noopener" aria-label="Open GitHub profile"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ali-noor-705845166/" target="_blank" rel="noopener" aria-label="Open LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/mr_khrus" target="_blank" rel="noopener" aria-label="Open Instagram profile"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/mrkhrus" target="_blank" rel="noopener" aria-label="Open Facebook profile"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20found%20your%20website." target="_blank" rel="noopener" aria-label="Open WhatsApp chat"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" name="name" required placeholder=" ">
+                            <label for="formName">Your Name</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="email" required placeholder=" ">
+                            <label for="formEmail">Your Email</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="formSubject" name="subject" required placeholder=" ">
+                            <label for="formSubject">Subject</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="formMessage">Your Message</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-close">
+                <span class="section-tag">&lt;/contact&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">&lt;AN /&gt;</a>
+                <p class="footer-text">
+                    Designed & Built by <span class="gradient-text">Ali Noor</span> with ❤️
+                </p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mrkhrus" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ali-noor-705845166/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mr_khrus" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/mrkhrus" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Ali Noor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
