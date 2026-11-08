@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelTap | Printing & Digital Customisation</title>
+    <meta name="description" content="PixelTap — Printing and digital customisation studio in Multan, Pakistan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        :root {
+            --accent-1: #E90407;
+            --accent-2: #a90407;
+            --accent-3: #ff3b3e;
+            --gradient: linear-gradient(135deg, #E90407, #a90407);
+            --gradient-hover: linear-gradient(135deg, #a90407, #E90407);
+            --border-glow: rgba(233, 4, 7, 0.2);
+        }
+
+        .pixeltap-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 130px 0 90px;
+        }
+
+        .pixeltap-hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 70px;
+            align-items: center;
+        }
+
+        .pixeltap-logo {
+            width: min(100%, 430px);
+            margin: 0 auto;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(233, 4, 7, 0.18);
+        }
+
+        .pixeltap-hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .pixeltap-hero-content h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            line-height: 1;
+            color: var(--text-primary);
+        }
+
+        .pixeltap-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.45rem);
+            color: var(--text-primary);
+        }
+
+        .pixeltap-hero-content .highlight,
+        .pixeltap-section .section-tag,
+        .pixeltap-section .section-title span,
+        .pixeltap-step-number,
+        .pixeltap-links a:hover {
+            color: var(--accent-1);
+        }
+
+        .pixeltap-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .pixeltap-section:nth-of-type(even) {
+            background: var(--bg-secondary);
+        }
+
+        .pixeltap-products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .pixeltap-product-card {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .pixeltap-product-card h3,
+        .pixeltap-step h3 {
+            color: var(--text-primary);
+        }
+
+        .pixeltap-product-card p {
+            flex: 1;
+        }
+
+        .pixeltap-product-card .btn {
+            align-self: flex-start;
+        }
+
+        .pixeltap-steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .pixeltap-step {
+            text-align: center;
+            padding: 30px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+
+        .pixeltap-step-number {
+            display: block;
+            font: 700 1.5rem var(--font-code);
+            margin-bottom: 14px;
+        }
+
+        .pixeltap-about {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+
+        .pixeltap-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .pixeltap-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+        }
+
+        .pixeltap-links a:hover {
+            border-color: var(--accent-1);
+        }
+
+        .pixeltap-footer-logo {
+            color: var(--accent-1);
+        }
+
+        @media (max-width: 768px) {
+            .pixeltap-hero-grid,
+            .pixeltap-products-grid,
+            .pixeltap-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .pixeltap-hero {
+                padding-top: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Ali Noor home">
+                <span class="logo-mark" aria-hidden="true">AN</span>
+                <span class="logo-word">PixelTap</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#how-to-order" class="nav-link">How to Order</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="pixeltap-hero">
+            <div class="container pixeltap-hero-grid">
+                <img class="pixeltap-logo" src="images/pixeltap-logo.jpg" alt="PixelTap logo">
+                <div class="pixeltap-hero-content">
+                    <span class="section-tag">&lt;pixeltap&gt;</span>
+                    <h1>PixelTap</h1>
+                    <p class="pixeltap-tagline">Printing &amp; digital customisation — NFC cards, PVC cards, photo frames &amp; stickers</p>
+                    <p>A creative studio in Multan, Pakistan. Turning ideas into reality, one pixel at a time.</p>
+                    <div class="pixeltap-buttons">
+                        <a class="btn btn-primary" href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20want%20to%20order%20from%20PixelTap." target="_blank" rel="noopener">
+                            <span>Order on WhatsApp</span><i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a class="btn btn-outline" href="https://www.instagram.com/pixeltap.pk" target="_blank" rel="noopener">
+                            <span>@pixeltap.pk</span><i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="pixeltap-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&lt;products&gt;</span>
+                    <h2 class="section-title">What we <span>make</span></h2>
+                    <p class="section-subtitle">Message us on WhatsApp for prices and orders.</p>
+                </div>
+                <div class="pixeltap-products-grid">
+                    <article class="project-card pixeltap-product-card">
+                        <div class="project-card-inner">
+                            <div class="project-icon"><i class="fas fa-wifi"></i></div>
+                            <h3>NFC Business Cards</h3>
+                            <p>Tap-to-share smart cards — one tap opens your contact, website or socials.</p>
+                            <a class="btn btn-outline" href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20want%20to%20order%20NFC%20Business%20Cards%20from%20PixelTap." target="_blank" rel="noopener">Message us on WhatsApp <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card pixeltap-product-card">
+                        <div class="project-card-inner">
+                            <div class="project-icon"><i class="fas fa-id-card"></i></div>
+                            <h3>PVC Cards</h3>
+                            <p>Durable printed PVC cards — membership, ID, loyalty cards.</p>
+                            <a class="btn btn-outline" href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20want%20to%20order%20PVC%20Cards%20from%20PixelTap." target="_blank" rel="noopener">Message us on WhatsApp <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card pixeltap-product-card">
+                        <div class="project-card-inner">
+                            <div class="project-icon"><i class="fas fa-image"></i></div>
+                            <h3>Custom Photo Frames</h3>
+                            <p>Personalised frames for gifts and memories.</p>
+                            <a class="btn btn-outline" href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20want%20to%20order%20Custom%20Photo%20Frames%20from%20PixelTap." target="_blank" rel="noopener">Message us on WhatsApp <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card pixeltap-product-card">
+                        <div class="project-card-inner">
+                            <div class="project-icon"><i class="fas fa-sticker-mule"></i></div>
+                            <h3>Stickers</h3>
+                            <p>Custom stickers for brands, laptops, shops or events.</p>
+                            <a class="btn btn-outline" href="https://wa.me/923027700990?text=Hi%20Ali,%20I%20want%20to%20order%20Stickers%20from%20PixelTap." target="_blank" rel="noopener">Message us on WhatsApp <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-order" class="pixeltap-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&lt;how-to-order&gt;</span>
+                    <h2 class="section-title">How to <span>order</span></h2>
+                </div>
+                <div class="pixeltap-steps">
+                    <article class="pixeltap-step"><span class="pixeltap-step-number">01</span><h3>Message us</h3><p>Message us on WhatsApp with what you need.</p></article>
+                    <article class="pixeltap-step"><span class="pixeltap-step-number">02</span><h3>Confirm details</h3><p>Confirm design &amp; price with us before anything is printed.</p></article>
+                    <article class="pixeltap-step"><span class="pixeltap-step-number">03</span><h3>We make it</h3><p>We print it and arrange delivery or pickup.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="pixeltap-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&lt;about&gt;</span>
+                    <h2 class="section-title">About <span>PixelTap</span></h2>
+                </div>
+                <p class="pixeltap-about">PixelTap is a printing and digital customisation business based in Multan, Pakistan. We make NFC business cards, PVC cards, custom photo frames, stickers, and personalised print products — designed to help people and small businesses stand out. Founded by Ali Noor in September 2025.</p>
+            </div>
+        </section>
+
+        <section class="pixeltap-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&lt;links&gt;</span>
+                    <h2 class="section-title">Find <span>PixelTap</span></h2>
+                </div>
+                <div class="pixeltap-links">
+                    <a href="https://www.instagram.com/pixeltap.pk" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.linkedin.com/company/pixeltap/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="index.html"><i class="fas fa-arrow-left"></i> Main site</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-logo pixeltap-footer-logo">PixelTap</a>
+                <p class="footer-text">Printing &amp; digital customisation in Multan, Pakistan.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/pixeltap.pk" target="_blank" rel="noopener" aria-label="PixelTap Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/pixeltap/" target="_blank" rel="noopener" aria-label="PixelTap LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2026 PixelTap — Multan, Pakistan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        navMenu.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }));
+    </script>
+</body>
+</html>
